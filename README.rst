@@ -1,4 +1,5 @@
-# django-latexify
+django-latexify
+-----------
 
 Contributing
 -----------
