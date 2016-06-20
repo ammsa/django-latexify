@@ -1,7 +1,9 @@
+{% load latexify %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
 <script>
-    var math_latex_inline_elements = document.getElementsByClassName("django-latexify math inline");
-    var math_latex_block_elements = document.getElementsByClassName("django-latexify math block");
+
+    var math_latex_inline_elements = document.getElementsByClassName('{% value_from_settings "LATEX_MATH_INLINE_CSS_CLASS" %}');
+    var math_latex_block_elements = document.getElementsByClassName('{% value_from_settings "LATEX_MATH_BLOCK_CSS_CLASS" %}');
     latex_render_math(math_latex_inline_elements, false);
     latex_render_math(math_latex_block_elements, true);
 
