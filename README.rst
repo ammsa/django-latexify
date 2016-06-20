@@ -1,7 +1,10 @@
-=====
-django-latexify
-=====
-|travis|
+django-latexify |travis|
+========================
+
+
+django-latexify let’s you easily render text and math equations from your template to look like LaTeX. The app lets you render math equations written in LaTeX on your HTML, or even just regular plain text.
+
+It uses Katex (a fast, easy-to-use JavaScript library for TeX math rendering on the web) for rending math equations and a modification of WiTex (LaTeX like CSS) for rending plain text.
 
 
 installation
