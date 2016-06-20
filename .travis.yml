@@ -1,0 +1,10 @@
+language: python
+python:
+- '2.7'
+env:
+- DATABASE_ENGINE=sqlite
+- DATABASE_ENGINE=postgres
+- DATABASE_ENGINE=mysql
+install:
+- pip install -r requirements.txt
+script: python latexify/manage.py test
