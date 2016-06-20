@@ -1,7 +1,0 @@
-include LICENSE
-include README.rst
-recursive-include latexify/latexify/static *
-recursive-include latexify/latexify/templates *
-recursive-include latexify/latexify/templatetags *
-recursive-include latexify/latexify/migrations *
-recursive-include docs *
