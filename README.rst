@@ -3,6 +3,12 @@ django-latexify
 =====
 |travis|
 
+
+installation
+-----------
+
+       python setup.py install
+
 Quick start
 -----------
 
@@ -29,30 +35,12 @@ Quick start
 
 5. Latexify your text by including the template tag, for example
 
-    .. code-block:: html
-        :linenos:
-
-        <!-- renders text argument to look like LaTeX-->
         {% latexify context_arg %}
-        <!-- parses math equations using special tags (See examples) and renders text argument -->
         {% latexify context_arg parse_math=True %}
-        <!-- render math equation inline -->
         {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_inline=True %}
-        <!-- render math equation in a centered new line -->
         {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_block=True %}
 
 
-which will render
-
-    .. math::
-
-    c = \pm\sqrt{a^2 + b^2}
-
-
-installation
------------
-
-       python setup.py install
 
 Contributing
 -----------
