@@ -44,6 +44,11 @@ def latexify(text,
         #  always add 'django-latexify' to user specified classes
         latex_type = 'django-latexify {}'.format(latex_css)
 
+    if math_inline and math_block:
+        #  can't have both inline and block together, not parsing.
+        return {'latex_type': latex_type,
+                'latex_text': mark_safe(text)}
+
     # span tag to be surrounded by the parsed math
     surround = r'<span class="{}">\1</span>'
 

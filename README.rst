@@ -12,13 +12,15 @@ installation
 Quick start
 -----------
 
-1. Add "latexify" to your INSTALLED_APPS setting like this::
+1. Add "latexify" to your INSTALLED_APPS setting like this:
 
-        INSTALLED_APPS = (
-               ...
-               'latexify',
-        )
+      .. code-block:: python
 
+         INSTALLED_APPS = (
+             ...
+             'latexify',
+             ...
+         )
 
 2. In your template, load latexify by including::
 
@@ -35,10 +37,12 @@ Quick start
 
 5. Latexify your text by including the template tag, for example
 
-        {% latexify context_arg %}
-        {% latexify context_arg parse_math=True %}
-        {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_inline=True %}
-        {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_block=True %}
+      .. code-block:: html
+
+         {% latexify context_arg %}
+         {% latexify context_arg parse_math=True %}
+         {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_inline=True %}
+         {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_block=True %}
 
 
 
