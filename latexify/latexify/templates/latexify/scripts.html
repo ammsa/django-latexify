@@ -1,0 +1,24 @@
+{% load latexify %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+<script>
+
+    var math_latex_inline_elements = document.getElementsByClassName('{% value_from_settings "LATEX_MATH_INLINE_CSS_CLASS" %}');
+    var math_latex_block_elements = document.getElementsByClassName('{% value_from_settings "LATEX_MATH_BLOCK_CSS_CLASS" %}');
+    latex_render_math(math_latex_inline_elements, false);
+    latex_render_math(math_latex_block_elements, true);
+
+    /**
+     * Calls katex to render math equation for each element in HTML elements set
+     * @param elements: HTML elements
+     * @param displayMode: True to display math centred in a new line
+     */
+    function latex_render_math(elements, displayMode){
+        for (var i = 0; i < elements.length; ++i) {
+            var element = elements[i];
+            var math_eq = element.innerHTML;
+            katex.render(math_eq, element, {displayMode: displayMode,
+                                            throwOnError: false,
+                                            errorColor: '#bf2626'});
+        }
+    }
+</script>
