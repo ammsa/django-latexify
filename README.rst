@@ -1,6 +1,7 @@
-django-latexify |pypi|
-========================
-|travis| |coveralls| |quality| |maintain| |website| |license|
+
+|logo| 
+======
+|pypi| |travis| |coveralls| |quality| |maintain| |website| |license|
 
 django-latexify let’s you easily render text and math equations from your template to look like LaTeX. The app lets you render math equations written in LaTeX on your HTML, or even just regular plain text.
 
@@ -48,6 +49,9 @@ Quick start
          {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_block=True %}
 
 
+Which will give you the following:
+
+|example|
 
 Contributing
 -----------
@@ -63,7 +67,12 @@ License
 
 All parts of django-latexify are free to use and abuse under the `open-source MIT license`_.
 
-
+.. |logo| image:: https://raw.githubusercontent.com/AmmsA/django-latexify/master/imgs/logo.png
+   :scale: 70 %
+   :alt: django-latexify
+   :target: https://github.com/ammsa/django-latexify
+.. |example| image:: https://raw.githubusercontent.com/AmmsA/django-latexify/master/imgs/example.png
+   :scale: 50 %
 .. |travis| image:: https://travis-ci.org/AmmsA/django-latexify.svg?branch=master
    :alt: Build Status - master branch
    :target: https://travis-ci.org/AmmsA/django-latexify
