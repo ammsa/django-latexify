@@ -1,6 +1,6 @@
-django-latexify |travis| |coveralls| |pypi|
+django-latexify |pypi|
 ========================
-
+|travis| |coveralls| |quality| |maintain| |website| |license|
 
 django-latexify let’s you easily render text and math equations from your template to look like LaTeX. The app lets you render math equations written in LaTeX on your HTML, or even just regular plain text.
 
@@ -68,8 +68,16 @@ All parts of django-latexify are free to use and abuse under the `open-source MI
    :alt: Build Status - master branch
    :target: https://travis-ci.org/AmmsA/django-latexify
 .. |coveralls| image:: https://img.shields.io/coveralls/AmmsA/django-latexify/master.svg
-   :target: https://coveralls.io/github/AmmsA/django-latexify       
-
+   :target: https://coveralls.io/github/AmmsA/django-latexify
 .. |pypi| image:: https://img.shields.io/pypi/v/django-latexify.svg
    :target: https://pypi.python.org/pypi/django-latexify
    :alt: Latest PyPI version
+.. |license| image:: https://img.shields.io/pypi/l/django-latexify.svg?maxAge=2592000
+   :target: https://github.com/ammsa/django-latexify/blob/master/LICENSE
+   :alt: Software license
+.. |website| image:: https://img.shields.io/website-up-down-green-red/http/shields.io.svg?maxAge=2592000
+   :target: https://ammsa.github.io/django-latexify
+.. |quality| image:: https://img.shields.io/codacy/grade/d8e71ce5a26248d892e96e35fdf1f7cf.svg?maxAge=2592000
+   :target: https://www.codacy.com/app/ammsa7/django-latexify?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AmmsA/django-latexify&amp;utm_campaign=Badge_Grade
+.. |maintain| image:: https://img.shields.io/maintenance/yes/2016.svg?maxAge=2592000
+   :target: https://github.com/ammsa/django-latexify
