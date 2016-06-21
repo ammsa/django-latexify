@@ -2,14 +2,14 @@ sudo: false
 language: python
 python:
 - '2.7'
-- '3.2'
-env:
+Updatenv:
   - DJANGO_VERSION='>=1.8,<1.9'
   - DJANGO_VERSION='>=1.9,<1.10'
 install:
 - pip install -q Django$DJANGO_VERSION
 - python setup.py -q install
-script: python setup.py test
+- pip install coveralls
+script: coverage run --source=latexify manage.py test
 # Report to coveralls
 after_success:
   - coveralls

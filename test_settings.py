@@ -1,3 +1,5 @@
+SECRET_KEY = 'django-latexifyisawesome'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3'

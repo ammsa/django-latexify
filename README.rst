@@ -1,4 +1,4 @@
-django-latexify |travis|
+django-latexify |travis| |coveralls| |pypi|
 ========================
 
 
@@ -67,3 +67,9 @@ All parts of django-latexify are free to use and abuse under the `open-source MI
 .. |travis| image:: https://travis-ci.org/AmmsA/django-latexify.svg?branch=master
    :alt: Build Status - master branch
    :target: https://travis-ci.org/AmmsA/django-latexify
+.. |coveralls| image:: https://img.shields.io/coveralls/AmmsA/django-latexify/master.svg
+   :target: https://coveralls.io/github/AmmsA/django-latexify       
+
+.. |pypi| image:: https://img.shields.io/pypi/v/django-latexify.svg
+   :target: https://pypi.python.org/pypi/django-latexify
+   :alt: Latest PyPI version
