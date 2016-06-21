@@ -15,4 +15,3 @@ LATEX_MATH_INLINE_CSS_CLASS = getattr(settings,
 LATEX_MATH_BLOCK_CSS_CLASS = getattr(settings,
                                      'LATEX_MATH_BLOCK_CSS_CLASS',
                                      "django-latexify math block")
-

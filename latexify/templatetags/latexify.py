@@ -22,14 +22,18 @@ def latexify(text,
 
     Args:
         text: Text to be rendered to look like LaTeX
-        parse_math: Boolean to check whether we should parse the math from regualr text
+        parse_math: Boolean to check whether we should
+                    parse the math from regular text
         math_inline: renders math equation inline
         math_block: renders math equation as a block
-        latex_css: Extra CSS to be included in the span of the rendered LaTeX
+        latex_css: Extra CSS to be included in the span
+                   of the rendered LaTeX
 
     Returns:
-        latex_type: the CSS classes of the most outer span of the rendered LaTeX
-        latex_text: The html-safe text that inside the most-outer span
+        latex_type: the CSS classes of the most outer
+                    span of the rendered LaTeX
+        latex_text: The html-safe text that inside the
+                    most-outer span
 
     """
 
@@ -54,21 +58,22 @@ def latexify(text,
 
     if parse_math:
         try:
+            error_msg = 'Can\t have two different tags in the same level'
+
             # check if there is inline tags inside block tag
             matches = re.findall(regex_math_block, text)
             if matches:
                 for m in matches[0]:
-                    if re.findall(regex_math_inline, m):
-                        raise ValueError("Can't have inline tags inside block tag")
-                    elif re.findall(regex_math_block, m):
-                        raise ValueError("Can't have block tags inside block tag")
+                    if re.findall(regex_math_inline, m) or \
+                       re.findall(regex_math_block, m):
+                        raise ValueError(error_msg)
 
             # check if there is block tags inside inline tag
             matches = re.findall(regex_math_inline, text)
             if matches:
                 for m in matches[0]:
                     if re.findall(regex_math_block, m):
-                        raise ValueError("Can't have block tags inside inline tag")
+                        raise ValueError(error_msg)
 
         except ValueError:
             #  invalid text input, not parsing.
@@ -77,12 +82,16 @@ def latexify(text,
 
         # find and replace block math tags
         text = re.sub(regex_math_block,
-                      surround.format(latex_settings.LATEX_MATH_BLOCK_CSS_CLASS),
+                      surround.format(
+                              latex_settings.LATEX_MATH_BLOCK_CSS_CLASS
+                      ),
                       text, flags=re.DOTALL)
 
         # find and replace inline math tags
         text = re.sub(regex_math_inline,
-                      surround.format(latex_settings.LATEX_MATH_INLINE_CSS_CLASS),
+                      surround.format(
+                            latex_settings.LATEX_MATH_INLINE_CSS_CLASS
+                      ),
                       text, flags=re.DOTALL)
 
     return {'latex_type': latex_type,
@@ -95,7 +104,8 @@ def value_from_settings(parser, token):
         # split_contents() knows not to split quoted strings.
         tag_name, var = token.split_contents()
     except ValueError:
-        raise template.TemplateSyntaxError, "%r tag requires a single argument" % token.contents.split()[0]
+        raise template.TemplateSyntaxError,\
+            "%r tag requires a single argument" % token.contents.split()[0]
     return ValueFromSettings(var)
 
 

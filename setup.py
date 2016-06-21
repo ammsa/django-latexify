@@ -28,4 +28,11 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
+    # Enable django-setuptest
+    test_suite='setuptest.setuptest.SetupTestSuite',
+    tests_require=(
+        'django-setuptest',
+        # Required by django-setuptools on Python 2.6
+        'argparse'
+    ),
 )
