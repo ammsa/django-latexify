@@ -1,5 +1,4 @@
-
-|logo| 
+|logo|
 ======
 |pypi| |travis| |coveralls| |quality| |maintain| |website| |license|
 
@@ -9,7 +8,7 @@ It uses Katex (a fast, easy-to-use JavaScript library for TeX math rendering on 
 
 
 installation
------------
+------------
 
        python setup.py install
 
@@ -65,10 +64,10 @@ Contributing
 License
 -----------
 
-All parts of django-latexify are free to use and abuse under the `open-source MIT license`_.
+All parts of django-latexify are free to use and abuse under the `open-source MIT license <https://github.com/ammsa/django-latexify/blob/master/LICENSE>`_.
 
-.. |logo| image:: https://raw.githubusercontent.com/AmmsA/django-latexify/master/imgs/logo.png
-   :scale: 70 %
+.. |logo| image:: https://raw.githubusercontent.com/AmmsA/django-latexify/test_readme/imgs/logo.png
+   :width: 100px
    :alt: django-latexify
    :target: https://github.com/ammsa/django-latexify
 .. |example| image:: https://raw.githubusercontent.com/AmmsA/django-latexify/master/imgs/example.png
