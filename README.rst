@@ -66,6 +66,15 @@ License
 
 All parts of django-latexify are free to use and abuse under the `open-source MIT license <https://github.com/ammsa/django-latexify/blob/master/LICENSE>`_.
 
+
+Change Log
+-----------
+
+**Version 0.2:**
+
+- Support python3. 
+
+
 .. |logo| image:: https://raw.githubusercontent.com/AmmsA/django-latexify/master/imgs/logo.png
    :width: 100px
    :alt: django-latexify
