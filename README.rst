@@ -87,5 +87,5 @@ All parts of django-latexify are free to use and abuse under the `open-source MI
    :target: https://ammsa.github.io/django-latexify
 .. |quality| image:: https://img.shields.io/codacy/grade/d8e71ce5a26248d892e96e35fdf1f7cf.svg?maxAge=2592000
    :target: https://www.codacy.com/app/ammsa7/django-latexify?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AmmsA/django-latexify&amp;utm_campaign=Badge_Grade
-.. |maintain| image:: https://img.shields.io/maintenance/yes/2016.svg?maxAge=2592000
+.. |maintain| image:: https://img.shields.io/maintenance/yes/2017.svg
    :target: https://github.com/ammsa/django-latexify
