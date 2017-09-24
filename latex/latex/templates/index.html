@@ -1,0 +1,13 @@
+{% load latexify %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'latexify/stylesheets.html' %}
+    </head>
+
+    <body>
+        {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_inline=True %}
+        {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_block=True %}
+        {% include 'latexify/scripts.html' %}
+    </body>
+</html>
