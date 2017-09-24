@@ -47,10 +47,15 @@ Quick start
          {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_inline=True %}
          {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_block=True %}
 
-
 Which will give you the following:
 
 |example|
+
+
+6. In you're HTML, be sure to include this before the `<html>` tag.
+
+        <!DOCTYPE html>
+        
 
 Contributing
 -----------
