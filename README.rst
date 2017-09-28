@@ -1,6 +1,6 @@
 |logo|
 ======
-|pypi| |travis| |coveralls| |quality| |maintain| |website| |license|
+|pypi| |travis| |coveralls| |quality| |python2| |python3| |maintain| |website| |license|
 
 django-latexify let’s you easily render text and math equations from your template to look like LaTeX. The app lets you render math equations written in LaTeX on your HTML, or even just regular plain text.
 
@@ -103,3 +103,9 @@ Change Log
    :target: https://www.codacy.com/app/ammsa7/django-latexify?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AmmsA/django-latexify&amp;utm_campaign=Badge_Grade
 .. |maintain| image:: https://img.shields.io/maintenance/yes/2017.svg
    :target: https://github.com/ammsa/django-latexify
+.. |python3| image:: https://img.shields.io/badge/python3-yes-brightgreen.svg
+   :target: https://github.com/ammsa/django-latexify
+   :alt: Python 3 support
+.. |python2| image:: https://img.shields.io/badge/python2-yes-brightgreen.svg
+   :target: https://github.com/ammsa/django-latexify
+   :alt: Python 2 support
