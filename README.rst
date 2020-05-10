@@ -52,7 +52,7 @@ Which will give you the following:
 |example|
 
 
-6. In you're HTML, be sure to include this before the `<html>` tag.
+6. In your HTML, be sure to include this before the `<html>` tag.
 
         <!DOCTYPE html>
         
