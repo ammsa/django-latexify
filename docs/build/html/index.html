@@ -1,72 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>django-\(\LaTeX\) ify documentation &mdash; django-latexify 0.0.1 documentation</title>
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django-\(\LaTeX\) ify documentation &#8212; django-latexify 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="django-latexify 0.0.1 documentation" href="#" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Usage" href="example.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
+  </head><body>
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
-  <div class="section" id="django-ify-documentation">
-<h1>django-<span class="math">\(\LaTeX\)</span> ify documentation<a class="headerlink" href="#django-ify-documentation" title="Permalink to this headline">¶</a></h1>
-<p>django-latexify let&#8217;s you easily render text and math equations from your template to look like LaTeX.
+  <div class="section" id="django-latex-ify-documentation">
+<h1>django-<span class="math notranslate nohighlight">\(\LaTeX\)</span> ify documentation<a class="headerlink" href="#django-latex-ify-documentation" title="Permalink to this headline">¶</a></h1>
+<p>django-latexify let’s you easily render text and math equations from your template to look like LaTeX.
 The app lets you render math equations written in LaTeX on your HTML, or even just regular plain text.</p>
 <p>It uses <a class="reference external" href="https://github.com/Khan/KaTeX">Katex</a> (a fast, easy-to-use JavaScript library for TeX math rendering on the web) for rending math equations and a modification of <a class="reference external" href="https://github.com/AndrewBelt/WiTeX">WiTex</a> (LaTeX like CSS) for rending plain text.</p>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>To install, just run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">django</span><span class="o">-</span><span class="n">latexify</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">django</span><span class="o">-</span><span class="n">latexify</span>
 </pre></div>
 </div>
 <p>or manually install it by running:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
-<p>And that&#8217;s it! The app need&#8217;s some little configuarions, so read below.</p>
+<p>And that’s it! The app need’s some little configurations, so read below.</p>
 </div>
 <div class="section" id="configurations">
 <h1>Configurations<a class="headerlink" href="#configurations" title="Permalink to this headline">¶</a></h1>
 <p>The following are required configurations to make django-latexify work.</p>
 <ol class="arabic simple">
-<li>In your settings.py, add <code class="docutils literal"><span class="pre">latexify</span></code> to your <code class="docutils literal"><span class="pre">INSTALLED_APPS</span></code> like this:</li>
+<li><p>In your settings.py, add <code class="docutils literal notranslate"><span class="pre">latexify</span></code> to your <code class="docutils literal notranslate"><span class="pre">INSTALLED_APPS</span></code> like this:</p></li>
 </ol>
 <p>The following is a SQL statement.</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="o">...</span>
 <span class="hll">    <span class="s1">&#39;latexify&#39;</span><span class="p">,</span>
 </span>    <span class="o">...</span>
@@ -75,58 +68,67 @@ The app lets you render math equations written in LaTeX on your HTML, or even ju
 </div>
 </div></blockquote>
 <ol class="arabic" start="2">
-<li><p class="first">In the template where you need to run django-latexify, load the template tag by including:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">load</span> <span class="n">latexify</span> <span class="o">%</span><span class="p">}</span>
+<li><p>In the template where you need to run django-latexify, load the template tag by including:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">load</span> <span class="n">latexify</span> <span class="o">%</span><span class="p">}</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">The template should also have django-latexify specific CSS, so in your HTML header, include:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">include</span> <span class="s1">&#39;latexify/stylesheets.html&#39;</span> <span class="o">%</span><span class="p">}</span>
+<li><p>The template should also have django-latexify specific CSS, so in your HTML header, include:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">include</span> <span class="s1">&#39;latexify/stylesheets.html&#39;</span> <span class="o">%</span><span class="p">}</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">For the math to be rendered, some JS should be included to your template, so in the bottom of your HTML body, include:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">include</span> <span class="s2">&quot;latexify/scripts.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+<li><p>For the math to be rendered, some JS should be included to your template, so in the bottom of your HTML body, include:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">include</span> <span class="s2">&quot;latexify/scripts.html&quot;</span> <span class="o">%</span><span class="p">}</span>
 </pre></div>
 </div>
 </li>
 </ol>
-<p>and that&#8217;s it! Read below or go to the examples section to see how to use django-latexify.</p>
+<p>and that’s it! Read below or go to the examples section to see how to use django-latexify.</p>
 </div>
 <div class="section" id="quick-usage">
 <h1>Quick Usage<a class="headerlink" href="#quick-usage" title="Permalink to this headline">¶</a></h1>
 <p>To render plain text,</p>
 <blockquote>
-<div><div class="highlight-html"><div class="highlight"><pre><span></span>{% latexify &#39;Hello World!&#39; %}
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% latexify &#39;Hello World!&#39; %}
 </pre></div>
 </div>
 </div></blockquote>
 <p>This will surround <cite>Hello World!</cite> with a span tag that have django-latexify CSS classes.</p>
 <p>To render a math equation inline,</p>
 <blockquote>
-<div><div class="highlight-html"><div class="highlight"><pre><span></span>{% latexify &#39;f(x) = \sqrt{\frac{x^2}{2}}&#39; math_inline=True %}
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% latexify &#39;f(x) = \sqrt{\frac{x^2}{2}}&#39; math_inline=True %}
 </pre></div>
 </div>
 </div></blockquote>
-<p>This will output <span class="math">\(f(x) = \sqrt{\frac{x^2}{2}}\)</span>.</p>
+<p>This will output <span class="math notranslate nohighlight">\(f(x) = \sqrt{\frac{x^2}{2}}\)</span>.</p>
 <p>To render a math equation centered in a new line,</p>
 <blockquote>
-<div><div class="highlight-html"><div class="highlight"><pre><span></span>{% latexify &#39;\binom{n}{k} = \frac{n!}{k!(n-k)!}&#39; math_block=True %}
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% latexify &#39;\binom{n}{k} = \frac{n!}{k!(n-k)!}&#39; math_block=True %}
 </pre></div>
 </div>
 </div></blockquote>
 <p>which will output</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\binom{n}{k} = \frac{n!}{k!(n-k)!}\]</div>
-<p>you can also render text with inline math by surrounding your math equation with <code class="docutils literal"><span class="pre">\$</span></code> tags and setting <code class="docutils literal"><span class="pre">parse_math</span></code> argument to true.</p>
+<p>you can also render text with inline math by surrounding your math equation with <code class="docutils literal notranslate"><span class="pre">\$</span></code> tags and setting <code class="docutils literal notranslate"><span class="pre">parse_math</span></code> argument to true.</p>
 <blockquote>
-<div><div class="highlight-html"><div class="highlight"><pre><span></span>{% latexify &#39;My favourite eq: \$ \frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x). \$&#39; parse_math=True %}
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% latexify &#39;My favourite eq: \$ \frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x). \$&#39; parse_math=True %}
 </pre></div>
 </div>
 </div></blockquote>
 <p>which will give you</p>
-<p>This will output <cite>My mathy stuyff:</cite> <span class="math">\(\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x).\)</span></p>
-<p>replacing the <code class="docutils literal"><span class="pre">\$</span></code> tag with <code class="docutils literal"><span class="pre">\$$</span></code> will render the math equation in a new line.</p>
+<p>This will output <cite>My mathy stuff:</cite> <span class="math notranslate nohighlight">\(\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x).\)</span></p>
+<p>replacing the <code class="docutils literal notranslate"><span class="pre">\$</span></code> tag with <code class="docutils literal notranslate"><span class="pre">\$$</span></code> will render the math equation in a new line.</p>
+<p>To add line breaks in your math equations, add <code class="docutils literal notranslate"><span class="pre">\newline</span></code> to your math equation. For example:</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% latexify &#39;x = a + b \newline a = 1 \newline b = 2&#39; math_block=True %}
+</pre></div>
+</div>
+</div></blockquote>
+<p>which will output</p>
+<div class="math notranslate nohighlight">
+\[x = a + b \newline a = 1 \newline b = 2\]</div>
 <div class="section" id="guide">
 <h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -146,29 +148,37 @@ The app lets you render math equations written in LaTeX on your HTML, or even ju
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
 
 
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">django-<span class="math">\(\LaTeX\)</span> ify documentation</a></li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#configurations">Configurations</a></li>
-<li><a class="reference internal" href="#quick-usage">Quick Usage</a><ul>
-<li><a class="reference internal" href="#guide">Guide</a></li>
+<h1 class="logo"><a href="#">django-latexify</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html#contact">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Need Help?</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -177,23 +187,24 @@ The app lets you render math equations written in LaTeX on your HTML, or even ju
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/index.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="clearer"></div>
@@ -202,11 +213,11 @@ The app lets you render math equations written in LaTeX on your HTML, or even ju
       &copy;2016, Mustafa Abualsaud.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.4</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/index.txt"
+      <a href="_sources/index.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

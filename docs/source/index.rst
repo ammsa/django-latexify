@@ -17,7 +17,7 @@ or manually install it by running::
 
    python setup.py install
 
-And that's it! The app need's some little configuarions, so read below.
+And that's it! The app need's some little configurations, so read below.
 
 
 Configurations
@@ -93,9 +93,22 @@ you can also render text with inline math by surrounding your math equation with
 
 which will give you
 
-This will output `My mathy stuyff:` :math:`\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x).`
+This will output `My mathy stuff:` :math:`\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x).`
 
 replacing the ``\$`` tag with ``\$$`` will render the math equation in a new line.
+
+To add line breaks in your math equations, add ``\newline`` to your math equation. For example:
+
+   .. code-block:: html
+
+      {% latexify 'x = a + b \newline a = 1 \newline b = 2' math_block=True %}
+
+which will output
+
+.. math::
+
+   x = a + b \newline a = 1 \newline b = 2
+
 
 
 Guide

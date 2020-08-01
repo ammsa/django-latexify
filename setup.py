@@ -8,13 +8,14 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-latexify',
-    version='0.2',
+    version='0.3',
     packages=['latexify'],
     install_requires=[],
     include_package_data=True,
     license='MIT License',
     description='Easy LaTeX rendering for Django.',
     long_description=README,
+    long_description_content_type='text/x-rst',
     url='https://github.com/AmmsA/django-latexify',
     author='Mustafa S',
     author_email='mabualsaud@outlook.com',

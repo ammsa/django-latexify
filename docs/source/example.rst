@@ -43,13 +43,13 @@ In the HTML that will use django-latexify
     <body>
         <h2>Welcome to my mathy blog</h2>
 
-        <p>{% latixfy my_mathy_paragraph parse_math=True %}</p>
+        <p>{% latexify my_mathy_paragraph parse_math=True %}</p>
 
-        <p>{% latixfy 'My latex like plain text'%}</p>
+        <p>{% latexify 'My latex like plain text'%}</p>
 
-        <p>My inline math {% latixfy 'e=mc^2' inline_math=True %}</p>
+        <p>My inline math {% latexify 'e=mc^2' math_inline=True %}</p>
 
-        <p>My block math {% latixfy 'e=mc^2' block_math=True %}</p>
+        <p>My block math {% latexify 'e=mc^2' math_block=True %}</p>
 
 
         {% include "latexify/scripts.html" %}

@@ -10,7 +10,7 @@ It uses Katex (a fast, easy-to-use JavaScript library for TeX math rendering on 
 installation
 ------------
 
-       python setup.py install
+       pip install django-latexify
 
 Quick start
 -----------
@@ -52,13 +52,21 @@ Which will give you the following:
 |example|
 
 
-6. In your HTML, be sure to include this before the `<html>` tag.
+6. To add line breaks, add ``\newline`` to your math equation. For example:
+
+   .. code-block:: html
+
+      {% latexify 'x = a + b \newline a = 1 \newline b = 2' math_block=True %}
+
+
+
+7. In your HTML, be sure to include this before the `<html>` tag.
 
         <!DOCTYPE html>
-        
+
 
 Contributing
------------
+------------
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -75,9 +83,16 @@ All parts of django-latexify are free to use and abuse under the `open-source MI
 Change Log
 -----------
 
+
+**Version 0.3:**
+
+- Support line breaks (Add :code:`\newline` inside your math equations)
+- Drop support for older Django versions
+- Support Django 2.0+
+
 **Version 0.2:**
 
-- Support python3. 
+- Support python3.
 
 
 .. |logo| image:: https://raw.githubusercontent.com/AmmsA/django-latexify/master/imgs/logo.png
