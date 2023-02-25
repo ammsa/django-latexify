@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-latexify',
-    version='0.3',
+    version='0.3.1',
     packages=['latexify'],
     install_requires=[],
     include_package_data=True,
@@ -19,6 +19,8 @@ setup(
     url='https://github.com/AmmsA/django-latexify',
     author='Mustafa S',
     author_email='mabualsaud@outlook.com',
+    maintainer='Charlie Wimmer',
+    maintainer_email='do-not-mail-me@fakemail.invalid',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
