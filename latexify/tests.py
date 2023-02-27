@@ -171,3 +171,9 @@ class LatexifyTests(TestCase):
             context = {}
             output = ''
             self.tag_test(template, context, output)
+    
+    def test__real_ampersand(self):
+        template = '{% latexify test_text %}'
+        context = {'test_text': '&'}
+        output = '<span class="django-latexify text">&</span>'
+        self.tag_test(template, context, output)

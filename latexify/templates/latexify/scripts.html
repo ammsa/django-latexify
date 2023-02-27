@@ -1,5 +1,5 @@
 {% load latexify %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.0/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
 <script>
 
     var math_latex_inline_elements = document.getElementsByClassName('{% value_from_settings "LATEX_MATH_INLINE_CSS_CLASS" %}');
@@ -15,7 +15,7 @@
     function latex_render_math(elements, displayMode){
         for (var i = 0; i < elements.length; ++i) {
             var element = elements[i];
-            var math_eq = element.innerHTML;
+            var math_eq = element.textContent;
             katex.render(math_eq, element, {displayMode: displayMode,
                                             throwOnError: false,
                                             errorColor: '#bf2626'});
