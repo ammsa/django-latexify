@@ -84,6 +84,11 @@ Change Log
 -----------
 
 
+**Version 0.3.2:**
+
+- Fix issue where special characters such as ampersands (e.g. used in a latex `matrix`` environment for alignment) would be resolved to HTML elements and confuse KaTeX.
+- Updated to use KaTeX 0.16.4. 
+
 **Version 0.3:**
 
 - Support line breaks (Add :code:`\newline` inside your math equations)
@@ -116,7 +121,7 @@ Change Log
    :target: https://ammsa.github.io/django-latexify
 .. |quality| image:: https://img.shields.io/codacy/grade/d8e71ce5a26248d892e96e35fdf1f7cf.svg?maxAge=2592000
    :target: https://www.codacy.com/app/ammsa7/django-latexify?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AmmsA/django-latexify&amp;utm_campaign=Badge_Grade
-.. |maintain| image:: https://img.shields.io/maintenance/yes/2017.svg
+.. |maintain| image:: https://img.shields.io/maintenance/yes/2023.svg
    :target: https://github.com/ammsa/django-latexify
 .. |python3| image:: https://img.shields.io/badge/python3-yes-brightgreen.svg
    :target: https://github.com/ammsa/django-latexify
