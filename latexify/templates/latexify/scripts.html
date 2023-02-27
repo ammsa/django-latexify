@@ -15,7 +15,7 @@
     function latex_render_math(elements, displayMode){
         for (var i = 0; i < elements.length; ++i) {
             var element = elements[i];
-            var math_eq = element.innerHTML;
+            var math_eq = element.textContent;
             katex.render(math_eq, element, {displayMode: displayMode,
                                             throwOnError: false,
                                             errorColor: '#bf2626'});
